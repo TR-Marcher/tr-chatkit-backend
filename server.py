@@ -12,9 +12,11 @@ if not OPENAI_API_KEY or not WORKFLOW_ID:
 app = Flask(__name__)
 
 OPENAI_BASE = os.getenv("OPENAI_BASE", "https://api.openai.com")  # Standard: offizielles API
+
 HEADERS = {
     "Authorization": f"Bearer {OPENAI_API_KEY}",
     "Content-Type": "application/json",
+    "OpenAI-Beta": "chatkit_beta=v1",
 }
 
 def create_session():
