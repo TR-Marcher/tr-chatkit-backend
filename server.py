@@ -26,7 +26,7 @@ def create_session():
     """
     url = f"{OPENAI_BASE}/v1/chatkit/sessions"
     body = {
-        "workflow_id": WORKFLOW_ID,
+        "workflow": {"id": WORKFLOW_ID},
         # optional: "user": {"id": "...", "name": "..."},
         # optional: "state_variables": {"plan": "pro"},
     }
